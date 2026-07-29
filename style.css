@@ -1,0 +1,158 @@
+body {
+    background: linear-gradient(120deg, #241d3b 0%, #3e2b56 50%, #e8a05d 100%);
+    display: flex;
+    min-height: 100vh;    
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+main h1, 
+main p {
+    text-align: center;
+    font-weight: 400;
+}
+
+main h1 {
+    background: linear-gradient(120deg, #9c6cd9 0%, #8960bd 50%, #e8a05d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.3));
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    width: 360px;
+    max-width: 90vw;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 10px 32px rgba(0, 0, 0, 0.37);
+    padding: 25px 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}    
+
+section {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(156, 108, 217, 0.6);
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 10px;
+    padding: 6px 17px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+	background-color:rgba(230, 234, 240,0.8);
+	color: #4d5259;
+
+}
+
+/* Układ wewnątrz sekcji - usunięto zbędne tagi <p> */
+section label,
+section strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Kontener wyrównujący input i jednostkę w jednej linii */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Odstęp między polem a jednostką */
+}
+
+/* Stylizacja pola wprowadzania */
+input {
+    flex: 1; /* Wypełnia całą dostępną przestrzeń */
+    width: 100%;
+    padding: 4px 0;
+    border: none;
+    background: transparent;
+    color:#36475e;
+    font-size: 16px;
+    font-weight: 500;
+    box-sizing: border-box;
+    outline: none;
+	font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "SF Pro Rounded", sans-serif;
+    font-weight: 700;
+}
+
+/* Stylizacja jednostki (PLN / %) */
+.unit {
+    font-size: 12px;
+    font-weight: bold;
+    color:#36475e;
+}
+
+/* Przycisk akcji */
+button {
+    display: flex; /* Zmieniono dla poprawnego wyrównania tekstu i strzałki */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
+    width: 100%;
+    margin-top: 5px; /* Nieco większy odstęp nad przyciskiem */
+    padding: 14px 20px; /* Nieco większy padding, by przycisk był masywniejszy */
+    
+    border-radius: 50px; /* Bardzo duże, pigułkowe zaokrąglenie */
+    
+    /* Stylizacja tła i ramek (Glassmorphism) */
+    background: #fde79c; /* Bardzo subtelne, przezroczyste tło */
+    backdrop-filter: blur(15px); /* Mocny efekt rozmycia tła za przyciskiem */
+    -webkit-backdrop-filter: blur(15px); /* Kompatybilność dla Safari */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Subtelna, jasna ramka */
+    
+    /* Stylizacja tekstu */
+    color: #4d5259; /* Ciemnoszary kolor tekstu, spójny z resztą pól */
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.5px; /* Subtelny odstęp między literami */
+    text-transform: capitalize; /* "Try Now" / "Oblicz cenę" */
+    
+    cursor: pointer;
+    transition: all 0.25s ease; /* Płynne przejścia dla hover */
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Bardzo delikatny cień, by przycisk nie "wisiał" */
+	font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "SF Pro Rounded", sans-serif;
+    font-weight: 700;
+}
+
+/* Efekt najechania kursorem, zachowujący glassmorphism */
+button:hover {
+    background: rgba(255, 255, 255, 0.2); /* Lekko jaśniejsze tło przy hover */
+    transform: translateY(-3px); /* Delikatne uniesienie */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Nieco mocniejszy cień */
+}
+
+#results{
+	background-color:#1e1b2c;
+	color:#f9cf9c;
+	padding: 14px 16px;
+	margin-top: 18px;
+	font-size:14px;
+}
+
+#results input{
+	color:#f9cf9c;
+	font-size:26px;
+	font-weight: 700;
+}
+#results .unit{
+	
+	color:#f9cf9c;
+	font-size: 18px;
+}

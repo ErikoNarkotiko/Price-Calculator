@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <title>Kalkulator Ceny Końcowej</title>
+</head>
+<body>
+
+    <main>
+        <h1>Kalkulator Ceny Końcowej</h1>
+        <p>Szybko. Łatwo. Mądrze.</p>
+
+        <form id="price-calculator">
+            <fieldset>
+                <section id="poczatek">
+                    <label for="price">Cena początkowa:</label>
+                    <div class="input-group">
+                        <input type="number" id="price" min="0" step="0.01" required placeholder="100">
+                        <span class="unit">PLN</span>
+                    </div>
+                </section>
+                
+                <section id="rabacik">
+                    <label for="discount">Rabat:</label>
+                    <div class="input-group">
+                        <input type="number" id="discount" min="0" max="100" step="1" required placeholder="20">
+                        <span class="unit">%</span>
+                    </div>
+                </section>
+                
+                <section id="zlodzieje">
+                    <label for="tax">Podatek VAT:</label>
+                    <div class="input-group">
+                        <input type="text" id="tax" value="23" readonly>
+                        <span class="unit">%</span>
+                    </div>
+                </section>
+                
+                <section id="results">
+                    <strong>Cena końcowa (brutto):</strong>
+                    <div class="input-group">
+						<span class="unit">PLN</span>
+                        <input type="text" id="final-price" placeholder="0.00" readonly>
+                        
+                    </div>
+                </section>
+            </fieldset>
+
+            <button type="button" onclick="calculate()">Oblicz cenę końcową</button>
+        </form>
+    </main>
+
+    <script src="plik.js"></script>
+</body>
+</html>
